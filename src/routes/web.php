@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/insert','AddressController@insert');
 Route::get('/update','AddressController@update');
+Route::get('/read','AddressController@read');
+Route::get('/delete','AddressController@delete');
