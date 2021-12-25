@@ -23,4 +23,18 @@ class AddressController extends Controller
         else
             return "There was a problem";
     }
+
+    public function read(){
+        $user = User::findOrFail(1);
+        echo $user->address->name;
+    }
+
+    public function delete(){
+        $user = User::findOrFail(1);
+        $delete = $user->address()->delete();
+        if($delete)
+            echo "Successfully deleted";
+        else
+            echo "A problem occurred";
+    }
 }
